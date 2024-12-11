@@ -2,6 +2,7 @@ username = input ("Как Вас зовут? ")
 print ("Здравствуйте, ", username, "!")
 title = input ("введите название заметки ")
 content = input ("Расскажите о своих планах и целях, " + username + " ")
+status = input( "Введите статус заметки ")
 import datetime
 created_date=(datetime.datetime.now())
 print("Дата создания заметки: ", created_date.strftime("%d-%m"))
