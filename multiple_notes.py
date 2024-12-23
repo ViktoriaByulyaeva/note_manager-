@@ -15,7 +15,7 @@ while True: #бесконечный цикл
     print("2) В процессе")
     print("3) Отложено")
     while True:
-        status = input("Ваш ответ: ")  # ввести ответ
+        status = input("Ваш ответ: ")  # ввести ответ33
         if status.lower() in ['1', 'готово']:
             print("Статус заметки обновлен на: Готово")
             break
@@ -38,7 +38,7 @@ while True: #бесконечный цикл
         except ValueError:
             print('Некорректная дата')
 
-    # условия для вычисления количества дней до даты дедлайна
+    # условия:
     if create_date.day == issue_date.day and create_date.month == issue_date.month and create_date.year == issue_date.year:
         print("Срок выполнения сегодня")
 
@@ -47,7 +47,7 @@ while True: #бесконечный цикл
 
     else:
         period = issue_date - create_date
-    print('Осталось {} дней'.format(period.days)) #сколько дней осталось
+    print('Осталось {} дней'.format(period.days))
 
     note1 = {'Имя пользователя' : username, 'Название заметки' : title, 'Содержание' : content, 'Статус' : status, 'Дата создания' : create_date, 'Дедлайн' : issue_date} #словарь
     notes.append(note1) #добавить словарь в список
@@ -56,5 +56,8 @@ while True: #бесконечный цикл
     if note2 == 'нет' :
         print('Возвращайтесь снова. Будем вместе достигать целей! ')
         break
-
+    elif note2 == 'да' :
+        print("Вместе мы добьемся вершин!")
+    else:
+        print('Некорректный ответ')
 print(notes) #увидеть весь список словарей
